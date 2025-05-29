@@ -1,16 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:newst_app/splash_screen.dart';
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(const NewstApp());
 }
 
 class NewstApp extends StatelessWidget {
   const NewstApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const SplashScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const SplashScreen(),
+    );
   }
 }
