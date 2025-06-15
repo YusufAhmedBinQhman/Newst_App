@@ -43,7 +43,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             alignment: Alignment.centerRight,
             margin: const EdgeInsets.only(top: 20),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignInScreen()),
+                );
+              },
               child: Text(
                 "Skip",
                 style: TextStyle(
